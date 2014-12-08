@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-file="http://www.springframework.org/schema/integration/file"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration.xsd
+            http://www.springframework.org/schema/integration/file
+            http://www.springframework.org/schema/integration/file/spring-integration-file.xsd">
+
+	<int:channel id="fileInputChannel" ></int:channel>
+	<int:channel id="fileProcessChannel" ></int:channel>
+	<int:channel id="fileOutputChannel" ></int:channel>
+
+	<int-file:inbound-channel-adapter id="fileInputAdaptor"
+		directory="/home/anishsneh/tmp/input" channel="fileInputChannel"
+		filename-regex="demo_file_[0-9]{4}.txt">
+		<int:poller id="filePoller" default="true" fixed-delay="5000" ></int:poller>
+	</int-file:inbound-channel-adapter>
+	<int-file:outbound-channel-adapter
+		id="fileOutputAdaptor" directory="/home/anishsneh/tmp/output"
+		filename-generator="customFileNameGeneratorBean" channel="fileOutputChannel" ></int-file:outbound-channel-adapter>
+
+
+	<int-file:file-to-string-transformer
+		input-channel="fileInputChannel" output-channel="fileProcessChannel" ></int-file:file-to-string-transformer>
+
+	<int:service-activator id="printServiceActivator"
+		input-channel="fileProcessChannel" output-channel="fileOutputChannel"
+		method="processContent" ref="printServiceActivatorBean" ></int:service-activator>
+
+	<beans:bean id="printServiceActivatorBean"
+		class="com.anishsneh.spring.integration.PrintServiceActivator" ></beans:bean>
+	<beans:bean id="customFileNameGeneratorBean"
+		class="com.anishsneh.spring.integration.CustomFileNameGenerator" ></beans:bean>
+
+</beans>
