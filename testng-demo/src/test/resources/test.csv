@@ -1,0 +1,7 @@
+run,testname,browser,url,do,role,username,area,languages,gender
+Y,Test_Chrome - PRD,GridChrome,http://localhost,TRUE,member,SearchPublic,"Columbia,SC",English,Male
+Y,Test_Chrome - PREPROD,GridChrome,http://localhost,TRUE,member,AutoUser,"Columbia,SC",English,Male
+N,Test_Chrome - PSSTAGE,GridChrome,http://localhost,FALSE,member,AutoUser,"Charleston,SC",English,
+Y,Test_Chrome - IMPSTAGE,GridChrome,http://localhost,TRUE,member,AutoUser,"Charleston,SC",,Male
+Y,Test_Chrome - STG,GridChrome,http://localhost,FALSE,member,AutoUser,"Columbia,SC",English,Male
+Y,Test_Chrome - INT,GridChrome,http://localhost,TRUE,member,AutoUser,"New York City, NY",Spanish,Male
