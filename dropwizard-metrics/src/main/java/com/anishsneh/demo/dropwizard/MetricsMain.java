@@ -16,6 +16,7 @@ import com.codahale.metrics.Slf4jReporter;
 
 /**
  * The Class MetricsMain.
+ * 
  * @author Anish Sneh
  */
 public class MetricsMain {
