@@ -10,7 +10,7 @@
 	    </layout>
 	</appender>
 	
-	<category name="com.anishsneh.demo.infinispan">
+	<category name="com.anishsneh.demo">
     	<priority value="INFO"/>
    	</category>
  
