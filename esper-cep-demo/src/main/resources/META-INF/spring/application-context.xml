@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans:bean id="loggerPostProcessor" class="com.anishsneh.demo.spring.framework.LoggerPostProcessor" />
+
+	<beans:bean id="alarmEventManager" class="com.anishsneh.demo.cep.esper.helper.AlarmEventManager" init-method="init">
+		<beans:property name="criticalAlarmEventSubscriber" ref="criticalAlarmEventSubscriber" />
+		<beans:property name="majorAlarmEventSubscriber" ref="majorAlarmEventSubscriber" />
+		<beans:property name="minorAlarmEventSubscriber" ref="minorAlarmEventSubscriber" />
+		<beans:property name="warningAlarmEventSubscriber" ref="warningAlarmEventSubscriber" />
+	</beans:bean>
+	
+	<beans:bean id="criticalAlarmEventSubscriber" class="com.anishsneh.demo.cep.esper.subscriber.CriticalAlarmEventSubscriber" />
+	<beans:bean id="majorAlarmEventSubscriber" class="com.anishsneh.demo.cep.esper.subscriber.MajorAlarmEventSubscriber" />
+	<beans:bean id="minorAlarmEventSubscriber" class="com.anishsneh.demo.cep.esper.subscriber.MinorAlarmEventSubscriber" />
+	<beans:bean id="warningAlarmEventSubscriber" class="com.anishsneh.demo.cep.esper.subscriber.WarningAlarmEventSubscriber" />
+
+</beans:beans>
