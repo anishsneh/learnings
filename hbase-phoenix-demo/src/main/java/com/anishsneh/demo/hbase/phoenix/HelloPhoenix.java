@@ -20,10 +20,7 @@ public class HelloPhoenix {
 
 	/** The Constant logger. */
 	private static final Logger logger = LoggerFactory.getLogger(HelloPhoenix.class);
-	
-	/** The Constant JDBC_CONNECTION_URL. */
-	public static final String JDBC_CONNECTION_URL = "jdbc:phoenix:localhost:2181";
-	
+		
 	/**
 	 * The main method.
 	 *
