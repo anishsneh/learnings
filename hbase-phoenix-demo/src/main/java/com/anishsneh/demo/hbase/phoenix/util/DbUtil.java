@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * The Class DbUtil.
  * 
- * For the demo cluster setup given in http://www.anishsneh.com/2014/09/hbase-phoenix.html user following JDBC URL:
+ * For the demo cluster setup given in http://www.anishsneh.com/2014/09/hbase-phoenix.html use following JDBC URL:
  * 
  * 		JDBC_CONNECTION_URL = "jdbc:phoenix:server01:2281"
  * 
