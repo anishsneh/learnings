@@ -92,7 +92,7 @@ public class UserDaoImpl implements UserDao{
 	 * @see com.anishsneh.demo.hbase.phoenix.dao.UserDao#getUserByGender(java.lang.String)
 	 */
 	public List<UserVo> getUserByGender(final String gender) {
-		final List<UserVo> userVoList = new ArrayList<>();
+		final List<UserVo> userVoList = new ArrayList<UserVo>();
 		try {
 			final Statement statement = connection.createStatement();
 			logger.info("Statement created from connection:{}", statement);
@@ -112,7 +112,7 @@ public class UserDaoImpl implements UserDao{
 	 * @see com.anishsneh.demo.hbase.phoenix.dao.UserDao#getUser(java.lang.String)
 	 */
 	public List<UserVo> getUser(final String query) {
-		final List<UserVo> userVoList = new ArrayList<>();
+		final List<UserVo> userVoList = new ArrayList<UserVo>();
 		try {
 			final Statement statement = connection.createStatement();
 			logger.info("Statement created from connection:{}", statement);
