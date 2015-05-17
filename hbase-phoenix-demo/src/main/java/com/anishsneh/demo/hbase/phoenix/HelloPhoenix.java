@@ -13,7 +13,7 @@ import com.anishsneh.demo.hbase.phoenix.vo.UserVo;
 /**
  * The Class HelloPhoenix.
  * 
- * NOTE: Before execution of this code HADOOP_HOME variable MUST BE pointing to valid HADOOP installations, hence it might not work on WINDOWS
+ * NOTE: Before execution of this code HADOOP_HOME variable MUST POINT to valid HADOOP installations, hence it might not work on WINDOWS
  * 
  */
 public class HelloPhoenix {
