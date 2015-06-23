@@ -1,0 +1,18 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.org/schema/arquillian
+        	http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+	<defaultProtocol type="Servlet 3.0" />
+	<engine>
+		<property name="deploymentExportPath">/target</property>
+	</engine>
+	<container qualifier="jboss_managed" default="false">
+		<configuration>
+			<property name="outputToConsole">true</property>
+			<property name="jbossHome">${jboss.home}</property>
+			<property name="allowConnectingToRunningServer">false</property>
+			<property name="javaVmArguments">-Darquillian.debug=true -Djava.net.preferIPv4Stack=true -Xms512m -Xmx1024m -XX:MaxPermSize=768m</property>
+			<property name="startupTimeoutInSeconds">120000</property>
+		</configuration>
+	</container>
+</arquillian>
