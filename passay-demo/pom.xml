@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.anishsneh.demo</groupId>
+	<artifactId>passay-demo</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>passay-demo Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+      <groupId>org.passay</groupId>
+      <artifactId>passay</artifactId>
+      <version>1.1.0</version>
+  </dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.10</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>passay-demo</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.anishsneh.demo.passay.Main</mainClass>
+					<includePluginDependencies>false</includePluginDependencies>
+					<arguments>
+						<argument>100</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
