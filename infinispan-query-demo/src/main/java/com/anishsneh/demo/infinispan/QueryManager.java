@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 
 /**
  * The Class QueryManager.
+ * 
+ * @author Anish Sneh
  */
 @SuppressWarnings("all")
 public class QueryManager {

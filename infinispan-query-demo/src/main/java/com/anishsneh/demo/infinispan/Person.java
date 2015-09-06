@@ -10,6 +10,8 @@ import org.hibernate.search.annotations.Store;
 
 /**
  * The Class Person.
+ * 
+ * @author Anish Sneh
  */
 @Indexed(index = "personIndex")
 public class Person implements Serializable{

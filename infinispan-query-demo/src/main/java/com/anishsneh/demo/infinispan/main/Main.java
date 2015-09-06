@@ -10,6 +10,8 @@ import com.anishsneh.demo.infinispan.QueryManager;
 
 /**
  * The Class Main.
+ * 
+ * @author Anish Sneh
  */
 public class Main {
 

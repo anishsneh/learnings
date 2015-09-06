@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 
 /**
  * The Class CacheManager.
+ * 
+ * @author Anish Sneh
  */
 @SuppressWarnings("all")
 public class CacheManager {
