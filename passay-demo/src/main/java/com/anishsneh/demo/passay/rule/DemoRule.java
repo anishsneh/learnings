@@ -13,6 +13,8 @@ import org.passay.RuleResultDetail;
 
 /**
  * The Class DemoRule.
+ * 
+ * @author Anish Sneh
  */
 public class DemoRule implements Rule{
 	

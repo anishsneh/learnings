@@ -10,6 +10,8 @@ import com.anishsneh.demo.passay.processor.PasswordProcessor;
 
 /**
  * The Class Main.
+ * 
+ * @author Anish Sneh
  */
 public class Main {
 	

@@ -28,6 +28,8 @@ import com.anishsneh.demo.passay.rule.DemoRule;
 
 /**
  * The Class PasswordProcessor.
+ * 
+ * @author Anish Sneh
  */
 public class PasswordProcessor {
 
