@@ -10,31 +10,51 @@ import org.apache.flume.api.RpcClient;
 import org.apache.flume.api.RpcClientFactory;
 import org.apache.flume.event.EventBuilder;
 
+/**
+ * The Class RpcClientFacade.
+ * 
+ * @author Anish Sneh
+ */
 public class RpcClientFacade {
 
+	/** The client. */
 	private RpcClient client;
+	
+	/** The hostname. */
 	private String hostname;
+	
+	/** The port. */
 	private int port;
 
-	public void init(String hostname, int port) {
+	/**
+	 * Inits the.
+	 *
+	 * @param hostname the hostname
+	 * @param port the port
+	 */
+	public void init(final String hostname, final int port) {
 		// Setup the RPC connection
 		this.hostname = hostname;
 		this.port = port;
 		this.client = RpcClientFactory.getDefaultInstance(hostname, port);
 	}
 
-	public void sendDataToFlume(String data) {
+	/**
+	 * Send data to flume.
+	 *
+	 * @param data the data
+	 */
+	public void sendDataToFlume(final String data) {
 		// Create a Flume Event object that encapsulates the sample data
-		Map<String, String> map = new HashMap<String, String>();
+		final Map<String, String> map = new HashMap<String, String>();
 		map.put("header_1", "Demo header 1");
 		map.put("header_2", "Demo header 2");
-		Event event = EventBuilder
-				.withBody(data, Charset.forName("UTF-8"), map);
+		final Event event = EventBuilder.withBody(data, Charset.forName("UTF-8"), map);
 
 		// Send the event
 		try {
 			client.append(event);
-		} catch (EventDeliveryException e) {
+		} catch (final EventDeliveryException e) {
 			// clean up and recreate the client
 			client.close();
 			client = null;
@@ -42,6 +62,9 @@ public class RpcClientFacade {
 		}
 	}
 
+	/**
+	 * Clean up.
+	 */
 	public void cleanUp() {
 		// Close the RPC connection
 		client.close();
