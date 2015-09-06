@@ -18,7 +18,7 @@ import com.anishsneh.demo.zookeeper.util.ElectionUtil;
  * 				$ mvn clean install
  * 		2). Start ZooKeeper server:
  * 				$ZOOKEEPER_HOME/bin/zkServer.sh start
- * 		3).	Open N number of terminals (I used N=4)
+ * 		3). Open N number of terminals (I used N=4)
  * 		4). In first terminal run 
  * 				$ java -jar target/zookeeper-leader-election-demo.jar 
  * 		5). Repeat step-4 for all the N terminals (in my case N=4)
