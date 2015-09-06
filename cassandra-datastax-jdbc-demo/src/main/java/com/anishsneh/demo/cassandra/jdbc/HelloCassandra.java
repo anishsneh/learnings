@@ -12,6 +12,8 @@ import com.datastax.driver.core.Session;
 
 /**
  * The Class HelloCassandra.
+ * 
+ * @author Anish Sneh
  */
 public class HelloCassandra {
 
