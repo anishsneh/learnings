@@ -17,6 +17,8 @@ import org.slf4j.LoggerFactory;
  * For local standalone HBase use:
  * 
  * 		JDBC_CONNECTION_URL = "jdbc:phoenix:localhost:2181"
+ * 
+ * @author Anish Sneh
  */
 public class DbUtil {
 

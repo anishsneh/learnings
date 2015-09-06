@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 /**
  * The Class UserVo.
+ * 
+ * @author Anish Sneh
  */
 public class UserVo implements Serializable{
 		

@@ -15,6 +15,7 @@ import com.anishsneh.demo.hbase.phoenix.vo.UserVo;
  * 
  * NOTE: Before execution of this code HADOOP_HOME variable MUST POINT to a valid HADOOP installation, hence it might not work on WINDOWS
  * 
+ * @author Anish Sneh
  */
 public class HelloPhoenix {
 

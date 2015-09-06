@@ -6,6 +6,8 @@ import com.anishsneh.demo.hbase.phoenix.vo.UserVo;
 
 /**
  * The Interface UserDao.
+ * 
+ * @author Anish Sneh
  */
 public interface UserDao {
 

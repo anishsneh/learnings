@@ -15,6 +15,8 @@ import com.anishsneh.demo.hbase.phoenix.vo.UserVo;
 
 /**
  * The Class UserDaoImpl.
+ * 
+ * @author Anish Sneh
  */
 public class UserDaoImpl implements UserDao{
 	
