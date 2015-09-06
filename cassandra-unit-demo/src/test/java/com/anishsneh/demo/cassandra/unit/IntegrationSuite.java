@@ -4,6 +4,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * The Class IntegrationSuite.
+ * 
+ * @author Anish Sneh
+ */
 @RunWith(Suite.class)
 @SuiteClasses({ 
 	CustomYamlConfigTest.class,
