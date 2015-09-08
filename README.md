@@ -1,4 +1,6 @@
-samples
-=======
+Learnings
+=========
 
-Sample programs from http://www.anishsneh.com
+Learning programs and learnings on Java/JEE, Big Data, PKI, CEP, Messaging based Enterprise Integration libraries and more.
+http://www.anishsneh.com
+
