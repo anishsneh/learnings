@@ -11,6 +11,7 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.10</version>
 		</dependency>
+		
 		<!-- MUST NOT USE "system" SCOPE IN PRODUCTION CODE, JUST ADDED TO ELABORATE AND SIMULATE THIRD PARTY LIBRARY -->
 		<dependency>
 			<groupId>com.anishsneh.demo</groupId>
@@ -54,7 +55,8 @@
 				</configuration>
 			</plugin>
 
-			<!-- JAVADOC PLUGIN FOR DOC GENERATION -->
+			<!-- JAVADOC PLUGIN FOR JAVADOC GENERATION -->
+			<!-- Excute using "$ mvn javadoc:javadoc" -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -65,6 +67,7 @@
 			</plugin>
 
 			<!-- JACOCO PLUGIN FOR CODE COVERAGE -->
+			<!-- Gets executed with "$ mvn clean install" -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -86,7 +89,7 @@
 			</plugin>
 
 			<!-- FINDBUGS/PMD/CHECKSTYLE/JACOCO PLUGINS FOR ANALYSIS AS A PART OF SITE FOR HTML PAGE GENERATION -->
-			<!-- Excute using "$ mvn clean install site" command -->
+			<!-- Excute using "$ mvn clean install site" -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
