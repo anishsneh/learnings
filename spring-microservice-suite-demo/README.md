@@ -14,4 +14,4 @@
 7. Open REST client & send GET `http://localhost:9090/api/foobar/users` you will get response via Zuul gateway for foobar-service (gateway is involved).
 8. Open REST client & send GET `http://localhost:8280/message` you will see response which consists of a property directly read from Cloud Configuration server (using [GIT Repo](https://github.com/anishsneh/config-repo)).
 
-> Note that while using Zuul Gateway in above example, all the requests are handled at 9090 port, clients need not be aware of 8180 & 8280 separately.
+> Note that while using Zuul Gateway in above example, all the requests are handled at 9090 port, clients need not be aware of 8180 & 8280 separately. There will be only a single entry point for all APIs/microservices.
