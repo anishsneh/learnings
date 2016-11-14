@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+    
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  prefix: /api
+  #ignoredServices: '*'
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+    helloworld-service-route:
+      path: /helloworld/**
+      url: http://localhost:8180
+    foobar-service-route:
+      path: /foobar/**
+      serviceId: FOOBAR-SERVICE

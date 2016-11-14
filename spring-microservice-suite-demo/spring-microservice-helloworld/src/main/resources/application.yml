@@ -1,0 +1,24 @@
+info:
+    enabled: true
+    sensitive: false
+    app:
+      name: Hello World
+      version: 1.0.0
+        
+endpoints:
+  enabled: true
+   
+server:
+  port: 8180
+  servletPath: /management
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    healthcheck:
+      enabled: true
+  instance:
+    statusPageUrlPath: ${server.servletPath}/info
+    healthCheckUrlPath: ${server.servletPath}/health
+    preferIpAddress: true
