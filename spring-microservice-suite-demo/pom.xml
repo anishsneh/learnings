@@ -20,5 +20,6 @@
 		<module>spring-microservice-configserver</module>
 		<module>spring-microservice-helloworld</module>
 		<module>spring-microservice-foobar</module>
+		<module>spring-microservice-kafka</module>
 	</modules>
 </project>

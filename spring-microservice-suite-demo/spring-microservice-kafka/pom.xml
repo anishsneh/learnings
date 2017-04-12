@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>spring-microservice-kafka</artifactId>
+	<packaging>pom</packaging>
+	<name>spring-microservice-kafka</name>
+	<description>Demo project for Spring Boot Kafka | Spring Cloud Stream including sample producer and consumer microservices</description>
+	<parent>
+        	<groupId>com.anishsneh.demo.spring.microservice</groupId>
+        	<artifactId>spring-microservice-suite</artifactId>
+        	<version>1.0.0</version>
+    	</parent>
+	<modules>
+		<module>spring-microservice-kafka-producer</module>
+		<module>spring-microservice-kafka-consumer</module>
+	</modules>
+</project>

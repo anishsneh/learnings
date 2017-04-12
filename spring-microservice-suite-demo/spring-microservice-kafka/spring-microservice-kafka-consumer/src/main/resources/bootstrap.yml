@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: HELLOKAFKA-CONSUMER
+  cloud:
+    stream:
+      bindings:
+        input: 
+          destination: timerTopic
+          content-type: application/json
+          group: timerGroup
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+          start-offset: earliest
+        bindings:
+          input:
+            consumer:
+              resetOffsets: false
+              autoCommitOffset: true
+        
