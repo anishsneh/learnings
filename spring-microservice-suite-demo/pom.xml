@@ -21,5 +21,6 @@
 		<module>spring-microservice-helloworld</module>
 		<module>spring-microservice-foobar</module>
 		<module>spring-microservice-kafka</module>
+		<module>spring-microservice-testdriven</module>
 	</modules>
 </project>
