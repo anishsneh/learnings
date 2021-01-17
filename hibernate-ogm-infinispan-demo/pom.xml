@@ -17,7 +17,7 @@
 	<properties>
 		<java.min.version>1.7</java.min.version>
 		<maven.min.version>3.0.0</maven.min.version>
-		<version.junit>4.11</version.junit>
+		<version.junit>4.13.1</version.junit>
 		<version.javaee.api>6.0</version.javaee.api>
 		<version.arquillian.core>1.1.5.Final</version.arquillian.core>
 		<version.arquillian.junit>1.1.5.Final</version.arquillian.junit>
