@@ -13,7 +13,7 @@
 		<spring.version>5.3.3</spring.version>
 		<slf4j-log4j12.version>1.7.10</slf4j-log4j12.version>
 		<junit.version>4.13.1</junit.version>
-		<xstream.version>1.4.15</xstream.version>
+		<xstream.version>1.4.17</xstream.version>
 	</properties>
 
 	<dependencies>
